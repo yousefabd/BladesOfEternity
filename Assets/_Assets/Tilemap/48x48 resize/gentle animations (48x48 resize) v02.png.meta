@@ -1,0 +1,1394 @@
+fileFormatVersion: 2
+guid: fd288916446a4e6468a98cfcb70b6db8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3764144825430934867
+    second: gentle animations (48x48 resize) v02_0
+  - first:
+      213: -7351116709770461206
+    second: gentle animations (48x48 resize) v02_1
+  - first:
+      213: 6816516940739008798
+    second: gentle animations (48x48 resize) v02_2
+  - first:
+      213: -5394161550710307377
+    second: gentle animations (48x48 resize) v02_3
+  - first:
+      213: 1258146608303525365
+    second: gentle animations (48x48 resize) v02_4
+  - first:
+      213: -4758670652922284114
+    second: gentle animations (48x48 resize) v02_5
+  - first:
+      213: -430267538707442141
+    second: gentle animations (48x48 resize) v02_6
+  - first:
+      213: -6632081623209802582
+    second: gentle animations (48x48 resize) v02_7
+  - first:
+      213: -8070870516623096726
+    second: gentle animations (48x48 resize) v02_8
+  - first:
+      213: -5186410051160459142
+    second: gentle animations (48x48 resize) v02_9
+  - first:
+      213: -1872403811423327278
+    second: gentle animations (48x48 resize) v02_10
+  - first:
+      213: -1793468776017721055
+    second: gentle animations (48x48 resize) v02_11
+  - first:
+      213: -1316976936075345450
+    second: gentle animations (48x48 resize) v02_12
+  - first:
+      213: 5676803207136413230
+    second: gentle animations (48x48 resize) v02_13
+  - first:
+      213: 5075694201838821982
+    second: gentle animations (48x48 resize) v02_14
+  - first:
+      213: -9066075734101608426
+    second: gentle animations (48x48 resize) v02_15
+  - first:
+      213: 6080897210502102134
+    second: gentle animations (48x48 resize) v02_16
+  - first:
+      213: 2161206037406117736
+    second: gentle animations (48x48 resize) v02_17
+  - first:
+      213: -6039741998870078554
+    second: gentle animations (48x48 resize) v02_18
+  - first:
+      213: -5099805031269510969
+    second: gentle animations (48x48 resize) v02_19
+  - first:
+      213: -7429057604993659057
+    second: gentle animations (48x48 resize) v02_20
+  - first:
+      213: -7504924234459784698
+    second: gentle animations (48x48 resize) v02_21
+  - first:
+      213: 5164013497502767599
+    second: gentle animations (48x48 resize) v02_22
+  - first:
+      213: 4330606365628036187
+    second: gentle animations (48x48 resize) v02_23
+  - first:
+      213: 2288484060650045559
+    second: gentle animations (48x48 resize) v02_24
+  - first:
+      213: -1555514973248745184
+    second: gentle animations (48x48 resize) v02_25
+  - first:
+      213: 6271934274195481335
+    second: gentle animations (48x48 resize) v02_26
+  - first:
+      213: 3030062480054973760
+    second: gentle animations (48x48 resize) v02_27
+  - first:
+      213: 7944481775955144842
+    second: gentle animations (48x48 resize) v02_28
+  - first:
+      213: -2239633713377756214
+    second: gentle animations (48x48 resize) v02_29
+  - first:
+      213: 1611146588756852073
+    second: gentle animations (48x48 resize) v02_30
+  - first:
+      213: -6215374381447093523
+    second: gentle animations (48x48 resize) v02_31
+  - first:
+      213: -6063624957467841039
+    second: gentle animations (48x48 resize) v02_32
+  - first:
+      213: -3780881835270159567
+    second: gentle animations (48x48 resize) v02_33
+  - first:
+      213: -3411896921327895882
+    second: gentle animations (48x48 resize) v02_34
+  - first:
+      213: -3399204251256011330
+    second: gentle animations (48x48 resize) v02_35
+  - first:
+      213: 1508728518249842333
+    second: gentle animations (48x48 resize) v02_36
+  - first:
+      213: -3144492321930469868
+    second: gentle animations (48x48 resize) v02_37
+  - first:
+      213: 2729276920506514376
+    second: gentle animations (48x48 resize) v02_38
+  - first:
+      213: -9063614954802833641
+    second: gentle animations (48x48 resize) v02_39
+  - first:
+      213: 5097214115421990492
+    second: gentle animations (48x48 resize) v02_40
+  - first:
+      213: 8890441462087730637
+    second: gentle animations (48x48 resize) v02_41
+  - first:
+      213: -6785608388608890812
+    second: gentle animations (48x48 resize) v02_42
+  - first:
+      213: 674892182722089168
+    second: gentle animations (48x48 resize) v02_43
+  - first:
+      213: 4321430308136290003
+    second: gentle animations (48x48 resize) v02_44
+  - first:
+      213: -8896787451531075481
+    second: gentle animations (48x48 resize) v02_45
+  - first:
+      213: 8318690335432545550
+    second: gentle animations (48x48 resize) v02_46
+  - first:
+      213: 7577804550910212042
+    second: gentle animations (48x48 resize) v02_47
+  - first:
+      213: 4796457756752398447
+    second: gentle animations (48x48 resize) v02_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 575
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3558fe286cdec3430800000000000000
+      internalID: 3764144825430934867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 575
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef71b3ec469bf990800000000000000
+      internalID: -7351116709770461206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_2
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 575
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e195e2aca02299e50800000000000000
+      internalID: 6816516940739008798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_3
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 575
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc587dc26a61425b0800000000000000
+      internalID: -5394161550710307377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_4
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 575
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd4b4f9ca5d57110800000000000000
+      internalID: 1258146608303525365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_5
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 575
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea7bd71f04ec5fdb0800000000000000
+      internalID: -4758670652922284114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 431
+        width: 288
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32616f404f1670af0800000000000000
+      internalID: -430267538707442141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_7
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 398
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa40f27e6ec16f3a0800000000000000
+      internalID: -6632081623209802582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_8
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 374
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a64c184c6028eff80800000000000000
+      internalID: -8070870516623096726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_9
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 413
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a78b019898b2608b0800000000000000
+      internalID: -5186410051160459142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_10
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 407
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db660867a2e306e0800000000000000
+      internalID: -1872403811423327278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_11
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 374
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12985b186a15c17e0800000000000000
+      internalID: -1793468776017721055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_12
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 413
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1c8db447829bde0800000000000000
+      internalID: -1316976936075345450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_13
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 407
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e260a2d907e08ce40800000000000000
+      internalID: 5676803207136413230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_14
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 374
+        width: 50
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e52ec110cfc707640800000000000000
+      internalID: 5075694201838821982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_15
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 398
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 618b51a6724de2280800000000000000
+      internalID: -9066075734101608426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_16
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 374
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c34a38bcfa36450800000000000000
+      internalID: 6080897210502102134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_17
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 413
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86f6502c0752efd10800000000000000
+      internalID: 2161206037406117736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_18
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 407
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ab5756e6a68e2ca0800000000000000
+      internalID: -6039741998870078554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_19
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 374
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c05e6f085ad939b0800000000000000
+      internalID: -5099805031269510969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_20
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 413
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f4076187fa6e890800000000000000
+      internalID: -7429057604993659057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_21
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 407
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60addcaeb2729d790800000000000000
+      internalID: -7504924234459784698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_22
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 374
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe999f57ae24aa740800000000000000
+      internalID: 5164013497502767599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_23
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 377
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b54fd458b87691c30800000000000000
+      internalID: 4330606365628036187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_24
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 377
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7708035d02452cf10800000000000000
+      internalID: 2288484060650045559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_25
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 386
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02115b09f53b96ae0800000000000000
+      internalID: -1555514973248745184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_26
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 380
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f2e4040ef26a0750800000000000000
+      internalID: 6271934274195481335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_27
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 377
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0457aea85c1fc0a20800000000000000
+      internalID: 3030062480054973760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_28
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 377
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a80fe546518704e60800000000000000
+      internalID: 7944481775955144842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_29
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 386
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acb3127f0093be0e0800000000000000
+      internalID: -2239633713377756214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_30
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 380
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d3fe74941fb5610800000000000000
+      internalID: 1611146588756852073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_31
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 362
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de268c73eed8eb9a0800000000000000
+      internalID: -6215374381447093523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_32
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 359
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fdafe64a3da9dba0800000000000000
+      internalID: -6063624957467841039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_33
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 362
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 133cef6b00c978bc0800000000000000
+      internalID: -3780881835270159567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_34
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 362
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ba700ab3d186a0d0800000000000000
+      internalID: -3411896921327895882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_35
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 362
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb543e44eb993d0d0800000000000000
+      internalID: -3399204251256011330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_36
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 362
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9688c0089410f410800000000000000
+      internalID: 1508728518249842333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_37
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 350
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41e1468b4e48c54d0800000000000000
+      internalID: -3144492321930469868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_38
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 350
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cb767c16e650e520800000000000000
+      internalID: 2729276920506514376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_39
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 350
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7171f0e3832973280800000000000000
+      internalID: -9063614954802833641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 263
+        width: 288
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ea5d55b31fcb640800000000000000
+      internalID: 5097214115421990492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 263
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc5c42cf761316b70800000000000000
+      internalID: 8890441462087730637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_42
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 260
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4486e0c4f1da4d1a0800000000000000
+      internalID: -6785608388608890812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_43
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 260
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d096dc4dd2bd5900800000000000000
+      internalID: 674892182722089168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_44
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 260
+        width: 47
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d6021628fdc8fb30800000000000000
+      internalID: 4321430308136290003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_45
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 257
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 760665533f2488480800000000000000
+      internalID: -8896787451531075481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_46
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 251
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e059ee729cce17370800000000000000
+      internalID: 8318690335432545550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_47
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 254
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac777521715c92960800000000000000
+      internalID: 7577804550910212042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gentle animations (48x48 resize) v02_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 26
+        width: 288
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f68c463cae0709240800000000000000
+      internalID: 4796457756752398447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa5c5884bb17ba64481f623ebc4accaa, type: 3}
+  m_Name: ItemCollection
+  m_EditorClassIdentifier: 
+  SpriteCollections:
+  - {fileID: 11400000, guid: 11c90683a136c514e8702fb946d15518, type: 2}
+  IconCollections:
+  - {fileID: 11400000, guid: cd475566d7adfe0428bf60b8b927dad0, type: 2}
+  Items:
+  - Id: Gold
+    Level: 0
+    Rarity: 0
+    Type: 1
+    Class: 0
+    Tags: 
+    Properties: []
+    Price: 0
+    Weight: 1
+    Material: 0
+    IconId: Common.Common.Supplies.Coin
+    SpriteId: Common.Common.Supplies.Coin
+    Meta: 
+    Localization: []
+  - Id: BoneClub
+    Level: 0
+    Rarity: 0
+    Type: 6
+    Class: 4
+    Tags: 
+    Properties:
+    - Id: 13
+      Value: 10-12
+    Price: 10
+    Weight: 20
+    Material: 0
+    IconId: UndeadHeroes.Undead.MeleeWeapon1H.BoneClub
+    SpriteId: UndeadHeroes.Undead.MeleeWeapon1H.BoneClub
+    Meta: 
+    Localization: []
+  - Id: RustedHelmet
+    Level: 0
+    Rarity: 0
+    Type: 9
+    Class: 9
+    Tags: 
+    Properties:
+    - Id: 29
+      Value: 10
+    Price: 15
+    Weight: 15
+    Material: 0
+    IconId: UndeadHeroes.Undead.Helmet.LightArmorB
+    SpriteId: UndeadHeroes.Undead.Armor.LightArmorB
+    Meta: 
+    Localization: []
+  - Id: RustedArmor
+    Level: 0
+    Rarity: 0
+    Type: 8
+    Class: 9
+    Tags: 
+    Properties:
+    - Id: 29
+      Value: 20
+    Price: 25
+    Weight: 30
+    Material: 0
+    IconId: UndeadHeroes.Undead.Armor.LightArmorB
+    SpriteId: UndeadHeroes.Undead.Armor.LightArmorB
+    Meta: 
+    Localization: []
+  BackgroundBlue: {fileID: 21300000, guid: a7a9761b8498fc3469b31675a4250f17, type: 3}
+  BackgroundBrown: {fileID: 21300000, guid: 407123b69c6ad85469da2466fe776a87, type: 3}
+  BackgroundGreen: {fileID: 21300000, guid: bd113ac01de518d43abfd2afc18e75f5, type: 3}
+  BackgroundGrey: {fileID: 21300000, guid: c49e3554a0acc074595cbdacdf2a4eca, type: 3}
+  BackgroundPurple: {fileID: 21300000, guid: bd0d835805a0c5846978e1b2c3ded5d6, type: 3}
+  BackgroundRed: {fileID: 21300000, guid: 9df088df15c9f2347bd8c55d54b50b84, type: 3}

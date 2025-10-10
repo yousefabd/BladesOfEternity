@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3202ed5772e26f4418e66b1d9df3a2d4, type: 3}
+  m_Name: FirearmCollection
+  m_EditorClassIdentifier: 
+  Id: MilitaryHeroes
+  FirearmParams:
+  - Name: Basic
+    FireMuzzlePrefab: {fileID: 198953912695222202, guid: c43b9f149a834261b676efb559453cea,
+      type: 3}
+    ShotSound: {fileID: 8300000, guid: 77b5397a51eb2844b8fe48aa8da2064f, type: 3}
+    ReloadSound: {fileID: 8300000, guid: da05161b13634a65b7046371c46febae, type: 3}
+  - Name: Cyberpunk
+    FireMuzzlePrefab: {fileID: 198953912695222202, guid: 97465e3593f80de45841e77f3b1422e5,
+      type: 3}
+    ShotSound: {fileID: 8300000, guid: 760534574062af041b77b8e57b540cec, type: 3}
+    ReloadSound: {fileID: 8300000, guid: da05161b13634a65b7046371c46febae, type: 3}
