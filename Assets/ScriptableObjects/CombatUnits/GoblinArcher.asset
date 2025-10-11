@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd6d1eb9ce77ee4387933b665b6fa6a, type: 3}
+  m_Name: GoblinArcher
+  m_EditorClassIdentifier: 
+  unitName: Goblin Archer
+  prefab: {fileID: 7259019464101630920, guid: 89f6f20252d6154459274fb6035aa819, type: 3}
+  spriteIcon: {fileID: 0}
+  team: {fileID: 11400000, guid: 529323e07d421e34e882f3ba6672c992, type: 2}
+  moveSpeed: 5

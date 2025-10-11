@@ -18,7 +18,7 @@ public class PathFindingGrid
         List<Vector3> pathPositions = new List<Vector3>();
         foreach(PathNode pathNode in pathNodes)
         {
-            Vector3 nodePosition = grid.GetWorldPosition(pathNode.x, pathNode.y);
+            Vector3 nodePosition = grid.GetCellWorldPosition(pathNode.x, pathNode.y);
             pathPositions.Add(nodePosition);
         }
         return pathPositions;

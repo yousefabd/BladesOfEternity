@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000009353c0e6
+  m_ApplyToSortingLayers: 000000009353c0e62350e6ef
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -348,6 +348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 951616015}
+  - component: {fileID: 951616016}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: Untagged
@@ -370,6 +371,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &951616016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951616013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd55e5196207eb548b0c91d4b465511a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Map: {fileID: 2373734963670096787, guid: e52e2757ce6d360409e22b97b6c3b5ab, type: 3}
+  teams:
+  - {fileID: 11400000, guid: c86828a8d09f8ca4985451c3372d7a27, type: 2}
+  - {fileID: 11400000, guid: 529323e07d421e34e882f3ba6672c992, type: 2}
+  gridTestPosition1: {x: 15, y: 4}
+  gridTestPosition2: {x: 13, y: 8}
+  testHuman: {fileID: 5952528653967617071, guid: e12f774723f94584089a93ee9cd5cf40, type: 3}
+  testGoblin: {fileID: 1604170233881399757, guid: 89f6f20252d6154459274fb6035aa819, type: 3}
 --- !u!1 &1228060306
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1228060307}
+  - component: {fileID: 1228060308}
   m_Layer: 0
   m_Name: InteractionSystem
   m_TagString: Untagged
@@ -395,12 +417,24 @@ Transform:
   m_GameObject: {fileID: 1228060306}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2661192, y: 0.89694417, z: 0.048237905}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1228060308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228060306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a548c14708928754bb26cd2a594a8b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

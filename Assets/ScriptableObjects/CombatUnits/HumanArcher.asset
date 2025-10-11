@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd6d1eb9ce77ee4387933b665b6fa6a, type: 3}
+  m_Name: HumanArcher
+  m_EditorClassIdentifier: 
+  unitName: Human Archer
+  prefab: {fileID: 2334481644276149802, guid: e12f774723f94584089a93ee9cd5cf40, type: 3}
+  spriteIcon: {fileID: 0}
+  team: {fileID: 11400000, guid: c86828a8d09f8ca4985451c3372d7a27, type: 2}
+  moveSpeed: 3
