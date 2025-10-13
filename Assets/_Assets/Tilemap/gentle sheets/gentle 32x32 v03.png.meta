@@ -311,7 +311,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gentle 32x32 v03_0: -8926138121402703109
+      gentle 32x32 v03_1: -8222640040738487936
+      gentle 32x32 v03_2: 6573667114159462195
+      gentle 32x32 v03_3: -8532886555988529747
+      gentle 32x32 v03_4: -2926178641515653198
+      gentle 32x32 v03_5: -8799216404279699556
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

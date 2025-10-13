@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gentle forest (48x48 resize) v03_0: -4771069795627931102
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

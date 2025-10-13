@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tree wall autotile guide_0: 6136143931918398644
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

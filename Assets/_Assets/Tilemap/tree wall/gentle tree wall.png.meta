@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gentle tree wall_0: -7386996608183465570
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

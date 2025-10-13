@@ -15,6 +15,8 @@ public class CombatUnit : MonoBehaviour
     public event Action<Vector2> OnMovementStart;
     public event Action<Vector2> OnMovementUpdate;
     public event Action OnMovementEnd;
+    public event Action<float> OnGetDamaged;
+    public event Action<CombatUnit> OnAttack;
 
     private TeamSO team;
     private State currentState = State.Idle;
@@ -25,11 +27,6 @@ public class CombatUnit : MonoBehaviour
     private void Awake()
     {
         team = combatUnitSO.team;
-    }
-
-    public void SetTeam(TeamSO team)
-    {
-        this.team = team;
     }
 
     public TeamSO GetTeam()
@@ -78,4 +75,18 @@ public class CombatUnit : MonoBehaviour
         currentState = State.Moving;
         OnMovementStart?.Invoke(currentPath[currentPathIndex] - transform.position);
     }
+    public CombatUnitSO GetCombatUnitSO()
+    {
+        return combatUnitSO;
+    }
+
+    public void Damage(float amount)
+    {
+        OnGetDamaged?.Invoke(amount);
+    }
+    public void Attack(CombatUnit targetUnit)
+    {
+        OnAttack?.Invoke(targetUnit);
+    }
+
 }

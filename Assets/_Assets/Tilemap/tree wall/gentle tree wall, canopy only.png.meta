@@ -236,7 +236,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gentle tree wall, canopy only_0: 4176719074551058931
+      gentle tree wall, canopy only_1: 7072716577664079682
+      gentle tree wall, canopy only_2: -7354047645289892096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

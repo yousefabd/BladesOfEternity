@@ -284,7 +284,6 @@ SpriteAtlas:
     - 600116dc238c6ff4abbcafd2d28f8aec: 21300000
     - c322bcdc78741394784535a5b794cb04: 21300000
     - 540eca1d0533a1541875d744b80ea601: 21300000
-    - 970c134dc552296468249b89d5450f25: 21300000
     - 1195174da0ba86345a6c00f6a8faf6c8: 21300000
     - eb7f635d782936843b6b14b8a73a1fc7: 21300000
     - 0852306d822b94149aa78675bb0ce6ab: 21300000
@@ -572,7 +571,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 600116dc238c6ff4abbcafd2d28f8aec, type: 3}
   - {fileID: 21300000, guid: c322bcdc78741394784535a5b794cb04, type: 3}
   - {fileID: 21300000, guid: 540eca1d0533a1541875d744b80ea601, type: 3}
-  - {fileID: 21300000, guid: 970c134dc552296468249b89d5450f25, type: 3}
   - {fileID: 21300000, guid: 1195174da0ba86345a6c00f6a8faf6c8, type: 3}
   - {fileID: 21300000, guid: eb7f635d782936843b6b14b8a73a1fc7, type: 3}
   - {fileID: 21300000, guid: 0852306d822b94149aa78675bb0ce6ab, type: 3}
@@ -859,7 +857,6 @@ SpriteAtlas:
   - ShieldTypeA
   - 'TankmanTypeB [ShowEars]'
   - MistBuster
-  - Scorpion
   - Rebel
   - MistBuster
   - HazardArmor

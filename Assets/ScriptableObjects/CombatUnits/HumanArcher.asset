@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdd6d1eb9ce77ee4387933b665b6fa6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 50ec12a0d35ea0c479e5d72d8d37ea4c, type: 3}
   m_Name: HumanArcher
   m_EditorClassIdentifier: 
   unitName: Human Archer
@@ -17,3 +17,4 @@ MonoBehaviour:
   spriteIcon: {fileID: 0}
   team: {fileID: 11400000, guid: c86828a8d09f8ca4985451c3372d7a27, type: 2}
   moveSpeed: 3
+  projectileType: {fileID: 11400000, guid: c8bf8620627bacd4786fddb28cf0fe5f, type: 2}

@@ -121,7 +121,7 @@ PrefabInstance:
     - target: {fileID: 5952528653967617071, guid: e12f774723f94584089a93ee9cd5cf40, type: 3}
       propertyPath: combatUnitSO
       value: 
-      objectReference: {fileID: 11400000, guid: 17304fa3da7bb6e468ed3f438ff2bf6f, type: 2}
+      objectReference: {fileID: 11400000, guid: b203e138540c2bf4babae8a0ee6e4d8a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5872218013214510965, guid: e12f774723f94584089a93ee9cd5cf40, type: 3}
