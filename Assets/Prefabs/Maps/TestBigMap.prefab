@@ -465,7 +465,7 @@ Transform:
   m_GameObject: {fileID: 2672219783305137977}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: -3, z: 0}
+  m_LocalPosition: {x: 9, y: -8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15704,11 +15704,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b481ecdac928fe49aa8afca7136f7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teamSpawnPointPositions:
-  - start: {fileID: 3851000525591196818}
-    end: {fileID: 3012381841698847083}
-  - start: {fileID: 2046284961623279824}
-    end: {fileID: 1374012563714142879}
 --- !u!1 &5499794893785013194
 GameObject:
   m_ObjectHideFlags: 0
@@ -15781,7 +15776,7 @@ Transform:
   m_GameObject: {fileID: 5549759502725181222}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: -3, z: 0}
+  m_LocalPosition: {x: 9, y: -8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15838,6 +15833,11 @@ MonoBehaviour:
   Height: 28
   cellSize: 1
   Origin: {fileID: 4142420777273176105}
+  TeamSpawnPoints:
+  - start: {fileID: 3851000525591196818}
+    end: {fileID: 3012381841698847083}
+  - start: {fileID: 2046284961623279824}
+    end: {fileID: 1374012563714142879}
 --- !u!1 &6356863585331420468
 GameObject:
   m_ObjectHideFlags: 0

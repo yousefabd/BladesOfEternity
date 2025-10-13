@@ -23,7 +23,6 @@ public class Grid<TGridObject>
         this.cellSize = cellSize;
         this.originPosition = originPosition;
         this.showDebug = showDebug;
-
         gridArray = new TGridObject[width, height];
         for(int i=0; i < width; i++) {
             for(int j=0; j < height; j++) {

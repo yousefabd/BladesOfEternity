@@ -8,10 +8,10 @@ public class MapSettings : MonoBehaviour
     [SerializeField] public int Height;
     [SerializeField] public int cellSize = 1;
     [SerializeField] public Transform Origin;
-    public List<SpawnPoint> TeamSpawnPoints;
-
-    private void Start()
+    [SerializeField] private List<SpawnPoint> TeamSpawnPoints;
+    public List<SpawnPoint> GetTeamSpawnPoints()
     {
-        TeamSpawnPoints = GetComponentInChildren<MapSpawnPoints>().teamSpawnPoints;
+        return TeamSpawnPoints;
     }
+
 }

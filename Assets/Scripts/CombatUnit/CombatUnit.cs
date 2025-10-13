@@ -11,7 +11,6 @@ public class CombatUnit : MonoBehaviour
         Idle,
         Moving
     }
-
     public event Action<Vector2> OnMovementStart;
     public event Action<Vector2> OnMovementUpdate;
     public event Action OnMovementEnd;

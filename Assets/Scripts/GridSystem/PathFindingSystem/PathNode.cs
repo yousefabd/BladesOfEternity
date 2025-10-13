@@ -7,6 +7,7 @@ public class PathNode
 
     public int gCost;
     public int hCost;
+
     public int FCost => gCost + hCost;
 
     public PathNode parent;

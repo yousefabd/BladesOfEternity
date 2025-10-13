@@ -26,6 +26,18 @@ public class CombatUnitAnimator : MonoBehaviour
         combatUnit.OnMovementStart -= CombatUnit_OnMovementStart;
         combatUnit.OnMovementUpdate -= CombatUnit_OnMovementUpdate;
         combatUnit.OnMovementEnd -= CombatUnit_OnMovementEnd;
+        combatUnit.OnAttack += CombatUnit_OnAttack;
+        combatUnit.OnGetDamaged += CombatUnit_OnGetDamaged;
+    }
+
+    private void CombatUnit_OnGetDamaged(float obj)
+    {
+        animationManager.Hit();
+    }
+
+    private void CombatUnit_OnAttack(CombatUnit obj)
+    {
+        animationManager.Attack();
     }
 
     private void CombatUnit_OnMovementStart(Vector2 direction)

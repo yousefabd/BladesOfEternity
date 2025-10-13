@@ -9,6 +9,7 @@ public class InteractionSystem : MonoBehaviour
     private float interactionRadius = 0.2f;
 
     public event Action<CombatUnit> OnClickUnit;
+    public event Action<CombatUnit> OnRightClickUnit;
     public event Action OnSwitchUnit;
     public event Action<Vector3> OnMoveUnit;
 
@@ -21,22 +22,38 @@ public class InteractionSystem : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Collider2D collider = Physics2D.OverlapCircle(UtilsClass.GetMouseWorldPosition(), interactionRadius);
-            if (collider != null)
+            if(TrySelectUnit(out CombatUnit combatUnit))
             {
-                if(collider.TryGetComponent(out CombatUnit combatUnit))
-                {
-                    OnClickUnit?.Invoke(combatUnit);
-                }
+                OnClickUnit?.Invoke(combatUnit);
             }
             else
             {
                 OnMoveUnit?.Invoke(UtilsClass.GetMouseWorldPosition());
             }
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            if(TrySelectUnit(out CombatUnit combatUnit))
+            {
+                OnRightClickUnit?.Invoke(combatUnit);
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             OnSwitchUnit?.Invoke();
         }
+    }
+    private bool TrySelectUnit(out CombatUnit combatUnit)
+    {
+        Collider2D collider = Physics2D.OverlapCircle(UtilsClass.GetMouseWorldPosition(), interactionRadius);
+        if (collider != null)
+        {
+            if (collider.TryGetComponent(out combatUnit))
+            {
+                return true;
+            }
+        }
+        combatUnit = null;
+        return false;
     }
 }
