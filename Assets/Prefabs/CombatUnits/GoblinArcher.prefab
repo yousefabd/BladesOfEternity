@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3630646948866639832, guid: bda116d2b0c853849a9e17c76421af9c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3630646948866639832, guid: bda116d2b0c853849a9e17c76421af9c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -74,6 +74,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2268937063301453665, guid: e12f774723f94584089a93ee9cd5cf40, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268937063301453665, guid: e12f774723f94584089a93ee9cd5cf40, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268937063301453665, guid: e12f774723f94584089a93ee9cd5cf40, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268937063301453665, guid: e12f774723f94584089a93ee9cd5cf40, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268937063301453665, guid: e12f774723f94584089a93ee9cd5cf40, type: 3}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268937063301453665, guid: e12f774723f94584089a93ee9cd5cf40, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2334481644276149802, guid: e12f774723f94584089a93ee9cd5cf40, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

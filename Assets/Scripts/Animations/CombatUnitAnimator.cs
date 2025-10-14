@@ -19,6 +19,8 @@ public class CombatUnitAnimator : MonoBehaviour
         combatUnit.OnMovementStart += CombatUnit_OnMovementStart;
         combatUnit.OnMovementUpdate += CombatUnit_OnMovementUpdate;
         combatUnit.OnMovementEnd += CombatUnit_OnMovementEnd;
+        combatUnit.OnAttack += CombatUnit_OnAttack;
+        combatUnit.OnGetDamaged += CombatUnit_OnGetDamaged;
     }
 
     void OnDisable()
@@ -26,8 +28,8 @@ public class CombatUnitAnimator : MonoBehaviour
         combatUnit.OnMovementStart -= CombatUnit_OnMovementStart;
         combatUnit.OnMovementUpdate -= CombatUnit_OnMovementUpdate;
         combatUnit.OnMovementEnd -= CombatUnit_OnMovementEnd;
-        combatUnit.OnAttack += CombatUnit_OnAttack;
-        combatUnit.OnGetDamaged += CombatUnit_OnGetDamaged;
+        combatUnit.OnAttack -= CombatUnit_OnAttack;
+        combatUnit.OnGetDamaged -= CombatUnit_OnGetDamaged;
     }
 
     private void CombatUnit_OnGetDamaged(float obj)
@@ -35,9 +37,13 @@ public class CombatUnitAnimator : MonoBehaviour
         animationManager.Hit();
     }
 
-    private void CombatUnit_OnAttack(CombatUnit obj)
+    private void CombatUnit_OnAttack(CombatUnit attacker)
     {
+        Vector3 attackPosition = attacker.transform.position;
+        Vector2 attackDir = CastTo4D(attackPosition - transform.position);
+
         animationManager.Attack();
+        character4D.SetDirection(attackDir);
     }
 
     private void CombatUnit_OnMovementStart(Vector2 direction)
@@ -56,9 +62,9 @@ public class CombatUnitAnimator : MonoBehaviour
         animationManager.SetState(Assets.HeroEditor4D.Common.Scripts.Enums.CharacterState.Idle);
     }
 
-    private Vector2Int CastTo4D(Vector2 moveDir)
+    private Vector2Int CastTo4D(Vector3 moveDir)
     {
-        if (moveDir == Vector2.zero)
+        if (moveDir == Vector3.zero)
         {
             return Vector2Int.zero; 
         }

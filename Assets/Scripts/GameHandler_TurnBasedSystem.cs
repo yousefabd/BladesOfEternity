@@ -37,9 +37,9 @@ public class GameHandler_TurnBasedSystem : MonoBehaviour
             Vector2Int startIndices = mapGrid.GetIJ(teamSpawnPoints[k].start.position);
             Vector2Int endIndices = mapGrid.GetIJ(teamSpawnPoints[k].end.position);
             List<CombatUnitSO> unitsToSpawn = teamsCombatUnits[k].units;
-            for (int i = startIndices.y, u = 0; i >= endIndices.y && u < unitsToSpawn.Count; i -= UnityEngine.Random.Range(2, 5)) 
+            for (int i = startIndices.y, u = 0; i >= endIndices.y && u < unitsToSpawn.Count; i -= 2) 
             {
-                for (int j = startIndices.x; j <= endIndices.x && u < unitsToSpawn.Count; j += UnityEngine.Random.Range(2, 5), u++) 
+                for (int j = startIndices.x; j <= endIndices.x && u < unitsToSpawn.Count; j += 2, u++) 
                 {
                     Vector3 unitSpawnPosition = mapGrid.GetCellWorldPosition(j, i);
                     Transform unitPrefab = unitsToSpawn[u].prefab;

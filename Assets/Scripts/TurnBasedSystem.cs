@@ -83,13 +83,9 @@ public class TurnBasedSystem
     {
         return unitMoveActions[unit].Any();
     }
-    private bool CanMove(CombatUnit unit)
+    private bool CanPerformAction(CombatUnit unit,MoveAction moveAction)
     {
-        return unitMoveActions[unit].Contains(MoveAction.Move);
-    }
-    private bool CanAttack(CombatUnit unit)
-    {
-        return unitMoveActions[unit].Contains(MoveAction.Attack);
+        return unitMoveActions[unit].Contains(moveAction);
     }
     private void MoveUnit(Vector3 destination)
     {
@@ -117,12 +113,14 @@ public class TurnBasedSystem
     private void ApplyMoveAction(CombatUnit unit, MoveAction moveAction)
     {
         unitMoveActions[unit].Remove(moveAction);
-        if (!HasMoveActions(unit))
-        {
-            availableUnits.RemoveAt(currentSelectedUnitIndex);
-        }
-
-        DeselectUnit();
+        //if(!CanPerformAction(unit, moveAction))
+        //{
+        //    return;
+        //}
+        //if (!HasMoveActions(unit))
+        //{
+        //    availableUnits.RemoveAt(currentSelectedUnitIndex);
+        //}
         if (availableUnits.Count == 0)
         {
             SwitchTurn();
