@@ -12,8 +12,10 @@ public class TurnBasedSystem
     //turn variables
     private List<CombatUnit> availableUnits;
     private Dictionary<CombatUnit, List<MoveAction>> unitMoveActions;
+
     private int currentTeamIndex = 0;
     private int currentSelectedUnitIndex = 0;
+    private bool IHaveNoNameForThis = false;
 
     public event Action<CombatUnit> OnSelectUnit;
     public event Action<CombatUnit,Vector3> OnMoveUnit;
@@ -40,12 +42,9 @@ public class TurnBasedSystem
     {
         if (unit.GetTeam().Equals(teams[currentTeamIndex]))
         {
-            Debug.Log("Cannot attack units of the same team");
+            return;
         }
-        else
-        {
-            AttackUnit(unit);
-        }
+        AttackUnit(unit);
     }
 
     private void InteractionSystem_OnMoveUnit(Vector3 movePosition)
@@ -77,6 +76,7 @@ public class TurnBasedSystem
     }
     private void DeselectUnit()
     {
+        Debug.Log("Deselecting Unit");
         currentSelectedUnitIndex = -1;
     }
     private bool HasMoveActions(CombatUnit unit)
@@ -89,9 +89,8 @@ public class TurnBasedSystem
     }
     private void MoveUnit(Vector3 destination)
     {
-        if(currentSelectedUnitIndex == -1)
+        if(currentSelectedUnitIndex == -1 || IHaveNoNameForThis)
         {
-            //no unit is selected.. 
             return;
         }
         CombatUnit unit = availableUnits[currentSelectedUnitIndex];
@@ -100,11 +99,11 @@ public class TurnBasedSystem
     }
     private void AttackUnit(CombatUnit targetUnit)
     {
-        if(currentSelectedUnitIndex == -1)
+        if(currentSelectedUnitIndex == -1 || IHaveNoNameForThis)
         {
-            //no unit is selected
             return;
         }
+        Debug.Log("Selected unit is " + currentSelectedUnitIndex);
         CombatUnit unit = availableUnits[currentSelectedUnitIndex];
         unit.Attack(targetUnit);
         ApplyMoveAction(unit, MoveAction.Attack);
@@ -112,15 +111,30 @@ public class TurnBasedSystem
     }
     private void ApplyMoveAction(CombatUnit unit, MoveAction moveAction)
     {
+        if (!CanPerformAction(unit, moveAction))
+        {
+            return;
+        }
+
         unitMoveActions[unit].Remove(moveAction);
-        //if(!CanPerformAction(unit, moveAction))
-        //{
-        //    return;
-        //}
-        //if (!HasMoveActions(unit))
-        //{
-        //    availableUnits.RemoveAt(currentSelectedUnitIndex);
-        //}
+        void OnUnitActionEnd()
+        {
+            OnUnitCompletedMoveAction(unit);
+            unit.OnMovementEnd -= OnUnitActionEnd;
+            unit.OnAttackEnd -= OnUnitActionEnd;
+        }
+
+        unit.OnMovementEnd += OnUnitActionEnd;
+        unit.OnAttackEnd += OnUnitActionEnd;
+    }
+    private void OnUnitCompletedMoveAction(CombatUnit unit)
+    {
+        if (!HasMoveActions(unit))
+        {
+            availableUnits.Remove(unit);
+            currentSelectedUnitIndex = 0;
+        }
+
         if (availableUnits.Count == 0)
         {
             SwitchTurn();
