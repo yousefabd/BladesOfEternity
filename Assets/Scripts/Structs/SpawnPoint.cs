@@ -1,8 +1,5 @@
-using NUnit.Framework;
 using System;
-using System.Collections.Generic;
 using UnityEngine;
-
 [Serializable]
 public struct SpawnPoint
 {
@@ -13,9 +10,4 @@ public struct SpawnPoint
         startPosition = start.transform.position;
         endPosition = end.transform.position;
     }
-}
-
-public class MapSpawnPoints : MonoBehaviour
-{
-    [SerializeField] public List<SpawnPoint> teamSpawnPoints;
 }

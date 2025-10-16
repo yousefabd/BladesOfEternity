@@ -5435,6 +5435,7 @@ MonoBehaviour:
   Height: 15
   cellSize: 1
   Origin: {fileID: 6325610128965940293}
+  TeamSpawnPoints: []
 --- !u!1 &5393796974888722574
 GameObject:
   m_ObjectHideFlags: 0

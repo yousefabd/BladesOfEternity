@@ -13,5 +13,6 @@ public class ArrowProjectile : MonoBehaviour
     {
         float damageAmount = projectile.GetProjectileSO().damage;
         targetUnit.Damage(damageAmount);
+        Destroy(gameObject);
     }
 }

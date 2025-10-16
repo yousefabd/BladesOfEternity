@@ -9,20 +9,27 @@ public class CombatUnit : MonoBehaviour
     public enum State
     {
         Idle,
-        Moving
+        Moving,
+        Attacking
     }
-
     public event Action<Vector2> OnMovementStart;
     public event Action<Vector2> OnMovementUpdate;
     public event Action OnMovementEnd;
     public event Action<float> OnGetDamaged;
     public event Action<CombatUnit> OnAttack;
+    public event Action OnAttackEnd;
 
     private TeamSO team;
     private State currentState = State.Idle;
+
+    //move state
     private Vector3 currentTargetPosition;
     private List<Vector3> currentPath;
     private int currentPathIndex;
+
+    //attack state
+    private float attackCooldown = 1f;
+    private float attackTime;
 
     private void Awake()
     {
@@ -43,6 +50,9 @@ public class CombatUnit : MonoBehaviour
 
             case State.Moving:
                 HandleMovement();
+                break;
+            case State.Attacking:
+                HandleAttacking();
                 break;
         }
     }
@@ -66,6 +76,15 @@ public class CombatUnit : MonoBehaviour
             }
         }
     }
+    private void HandleAttacking()
+    {
+        attackTime -= Time.deltaTime;
+        if(attackTime < 0f)
+        {
+            currentState = State.Idle;
+            OnAttackEnd?.Invoke();
+        }
+    }
     public void MovePath(List<Vector3> path)
     {
         if (path.Count == 0) return;
@@ -86,6 +105,8 @@ public class CombatUnit : MonoBehaviour
     }
     public void Attack(CombatUnit targetUnit)
     {
+        attackTime = attackCooldown;
+        currentState = State.Attacking;
         OnAttack?.Invoke(targetUnit);
     }
 

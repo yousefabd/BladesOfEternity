@@ -42,7 +42,7 @@ public class Projectile : MonoBehaviour
     {
         if (!collision.gameObject.TryGetComponent(out CombatUnit combatUnit))
             return;
-        if(combatUnit.Equals(targetUnit))
+        if (combatUnit.Equals(targetUnit))
             OnReachTargetUnit?.Invoke(combatUnit);
         else if(combatUnit.GetTeam().Equals(targetUnit.GetTeam()))
             OnHitUnit?.Invoke(combatUnit);
