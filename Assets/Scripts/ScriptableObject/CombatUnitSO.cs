@@ -10,4 +10,5 @@ public class CombatUnitSO : ScriptableObject
     public TeamSO team;
     public float moveSpeed;
     public float attackRadius;
+    public int maxHealth = 100;
 }
