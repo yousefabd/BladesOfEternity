@@ -17,5 +17,7 @@ MonoBehaviour:
   spriteIcon: {fileID: 0}
   team: {fileID: 11400000, guid: c86828a8d09f8ca4985451c3372d7a27, type: 2}
   moveSpeed: 3
-  attackRadius: 7
+  moveTiles: 6
+  attackTiles: 5
+  attackCooldown: 0.8
   projectileType: {fileID: 11400000, guid: c8bf8620627bacd4786fddb28cf0fe5f, type: 2}

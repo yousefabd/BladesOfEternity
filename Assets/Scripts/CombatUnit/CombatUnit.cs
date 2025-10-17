@@ -28,7 +28,6 @@ public class CombatUnit : MonoBehaviour
     private int currentPathIndex;
 
     //attack state
-    private float attackCooldown = 1f;
     private float attackTime;
 
     private void Awake()
@@ -105,7 +104,7 @@ public class CombatUnit : MonoBehaviour
     }
     public void Attack(CombatUnit targetUnit)
     {
-        attackTime = attackCooldown;
+        attackTime = combatUnitSO.attackCooldown;
         currentState = State.Attacking;
         OnAttack?.Invoke(targetUnit);
     }

@@ -9,5 +9,7 @@ public class CombatUnitSO : ScriptableObject
     public Sprite spriteIcon;
     public TeamSO team;
     public float moveSpeed;
-    public float attackRadius;
+    public int moveTiles;
+    public int attackTiles;
+    public float attackCooldown;
 }
