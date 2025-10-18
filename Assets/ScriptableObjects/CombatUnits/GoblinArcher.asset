@@ -20,4 +20,5 @@ MonoBehaviour:
   moveTiles: 6
   attackTiles: 5
   attackCooldown: 0.8
+  maxHealth: 0
   projectileType: {fileID: 11400000, guid: c8bf8620627bacd4786fddb28cf0fe5f, type: 2}

@@ -6,6 +6,10 @@ using UnityEngine;
 public class CombatUnit : MonoBehaviour
 {
     [SerializeField] private CombatUnitSO combatUnitSO;
+
+    private HealthSystem HealthSystem { get; set; }
+    [SerializeField] private HealthBar HealthBar { get; set; }
+
     public enum State
     {
         Idle,
@@ -35,6 +39,23 @@ public class CombatUnit : MonoBehaviour
         team = combatUnitSO.team;
     }
 
+    private void Start() {
+        this.HealthSystem = new HealthSystem();
+        this.HealthBar = new HealthBar();
+        this.HealthBar.Setup(this.HealthSystem);
+
+        OnGetDamaged += HandleDamage;
+
+        Debug.Log("health " + this.HealthSystem.GetHealth());
+    }
+
+    private void HandleDamage(float damageAmount) {
+        HealthSystem.Damage((int)damageAmount);
+        this.HealthBar.Setup(this.HealthSystem);
+
+        Debug.Log($"Unit took {damageAmount} damage. Current health: {HealthSystem.GetHealth()}");
+    }
+
     public TeamSO GetTeam()
     {
         return team;
@@ -55,6 +76,7 @@ public class CombatUnit : MonoBehaviour
                 break;
         }
     }
+
     private void HandleMovement()
     {
         if (currentPathIndex < currentPath.Count)
@@ -75,6 +97,7 @@ public class CombatUnit : MonoBehaviour
             }
         }
     }
+
     private void HandleAttacking()
     {
         attackTime -= Time.deltaTime;
@@ -84,6 +107,7 @@ public class CombatUnit : MonoBehaviour
             OnAttackEnd?.Invoke();
         }
     }
+
     public void MovePath(List<Vector3> path)
     {
         if (path.Count == 0) return;
@@ -93,6 +117,7 @@ public class CombatUnit : MonoBehaviour
         currentState = State.Moving;
         OnMovementStart?.Invoke(currentPath[currentPathIndex] - transform.position);
     }
+
     public CombatUnitSO GetCombatUnitSO()
     {
         return combatUnitSO;
@@ -102,6 +127,7 @@ public class CombatUnit : MonoBehaviour
     {
         OnGetDamaged?.Invoke(amount);
     }
+
     public void Attack(CombatUnit targetUnit)
     {
         attackTime = combatUnitSO.attackCooldown;
