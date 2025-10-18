@@ -1,13 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
     private HealthSystem HealthSystem;
+    [SerializeField]private Image BarImage;
+
     public void Setup(HealthSystem healthSystem) {
         this.HealthSystem = healthSystem;
-    } 
 
-    private void Update() {
-        transform.Find("Bar").localScale = new Vector3(this.HealthSystem.GetHealthPercent(),1);
+        Debug.Log("health bar setup " + this.HealthSystem.GetHealth());
+
+        // this.BarImage.fillAmount = (float)0.5;
     }
 }
