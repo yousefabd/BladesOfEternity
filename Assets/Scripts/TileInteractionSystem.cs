@@ -15,14 +15,16 @@ public class TileInteractionSystem : MonoBehaviour
 
     private List<ActionTile> currentActionTiles = new();
 
-    public event Action<CombatUnit> OnClickUnitMove;
-    public event Action<CombatUnit> OnClickUnitAttack;
+    public event Action<CombatUnit,MoveAction> OnClickUnit;
+    public event Action OnSkipTurn;
     public event Action<Vector3> OnMoveUnit;
+    public event Action<CombatUnit> OnAttackUnit; 
     public event Action OnClickEmptyTile;
     private void Update()
     {
         HandleTileHover();
         HandleMouseClick();
+        HandleKeyPress();
     }
     private void HandleTileHover()
     {
@@ -45,7 +47,7 @@ public class TileInteractionSystem : MonoBehaviour
                 ClearActionTilesList();
                 if (TryGetUnit(selectedTileWorldPosition, out var unit)) 
                 {
-                    HandleUnitActions(unit);
+                    HandleUnitMoveActions(unit);
                 }
                 else
                 {
@@ -53,23 +55,37 @@ public class TileInteractionSystem : MonoBehaviour
                 }
                 break;
             case ActionTile.TileType.Walk:
-                OnMoveUnit?.Invoke(selectedTileWorldPosition);
                 ClearActionTilesList();
+                OnMoveUnit?.Invoke(selectedTileWorldPosition);
+                break;
+            case ActionTile.TileType.Attack:
+                if (TryGetUnit(selectedTileWorldPosition, out unit)) {
+                    ClearActionTilesList();
+                    OnAttackUnit?.Invoke(unit);
+                }
                 break;
         }
     }
-    private void HandleUnitActions(CombatUnit combatUnit)
+    private void HandleKeyPress()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ClearActionTilesList();
+            OnSkipTurn?.Invoke();
+        }
+    }
+    private void HandleUnitMoveActions(CombatUnit combatUnit)
     {
         if (Input.GetMouseButtonDown(0))
         {
-            OnClickUnitMove?.Invoke(combatUnit);
+            OnClickUnit?.Invoke(combatUnit,MoveAction.Move);
         }
         else if (Input.GetMouseButtonDown(1))
         {
-            OnClickUnitAttack?.Invoke(combatUnit); 
+            OnClickUnit?.Invoke(combatUnit, MoveAction.Attack); 
         }
     }
-    private bool TryGetUnit(Vector3 worldPosition, out CombatUnit unit)
+    public bool TryGetUnit(Vector3 worldPosition, out CombatUnit unit)
     {
         unit = Physics2D.OverlapBox(worldPosition, interactionBoxSize,0f)?.GetComponent<CombatUnit>();
         return unit != null;

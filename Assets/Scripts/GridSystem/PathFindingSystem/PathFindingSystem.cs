@@ -66,26 +66,43 @@ public class PathFindingSystem
                 visited.Add(neighbour);
             }
         }
-
+        result.Remove(startIndices);
         return result;
     }
-    public List<Vector2Int> GetAvailableInteractIndices(Vector3 position, int interactTiles)
+    public List<Vector2Int> GetTeamAvailableInteractIndices(Vector3 position,TeamSO team, int interactTiles)
     {
         Vector2Int startIndices = grid.GetIJ(position);
         List<Vector2Int> result = new();
 
         for (int i = startIndices.x - interactTiles; i <= startIndices.x + interactTiles; i++)
         {
-            for (int j = startIndices.y - interactTiles; j < startIndices.y + interactTiles; j++)
+            for (int j = startIndices.y - interactTiles; j <= startIndices.y + interactTiles; j++)
             {
                 int distance = Mathf.Abs(i - startIndices.x) + Mathf.Abs(j - startIndices.y);
                 if (i < 0 || i >= grid.GetWidth() || j < 0 || j >= grid.GetHeight() || distance > interactTiles)
+                {
                     continue;
+                }
                 if (pathFinding.IsObstacle(grid.GetGridObject(i, j)))
-                    continue;
+                {
+                    Vector3 pathNodeWorldPosition = grid.GetCellWorldPosition(i, j);
+                    Collider2D obstacle = pathFinding.GetObstacle(pathNodeWorldPosition);
+                    CombatUnit unit = obstacle.GetComponent<CombatUnit>();
+                    if(unit != null)
+                    {
+                        if (unit.GetTeam().Equals(team))
+                            continue;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+
+                }
                 result.Add(new Vector2Int(i, j));
             }
         }
+        result.Remove(startIndices);
         return result;
     }
 }

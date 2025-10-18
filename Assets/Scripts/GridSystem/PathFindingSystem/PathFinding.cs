@@ -71,11 +71,15 @@ public class PathFinding
     }
     public bool IsObstacle(PathNode pathNode) {
         Vector3 worldPosition = grid.GetCellWorldPosition(pathNode.x, pathNode.y);
-        float boxSize = grid.GetCellSize() - grid.GetCellSize() * 0.5f;
-        if (Physics2D.OverlapBox(worldPosition, new Vector2(boxSize,boxSize),0f)) { 
+        if (GetObstacle(worldPosition)) { 
             return true;
         }
         return false;
+    }
+    public Collider2D GetObstacle(Vector3 cellWorldPosition)
+    {
+        float boxSize = grid.GetCellSize() - grid.GetCellSize() * 0.5f;
+        return Physics2D.OverlapBox(cellWorldPosition, new Vector2(boxSize, boxSize), 0f);
     }
     private List<PathNode> GetAdjacentNodes(PathNode node) {
         List<PathNode> adjacentNodes = new List<PathNode>();

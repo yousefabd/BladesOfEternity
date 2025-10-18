@@ -60,9 +60,10 @@ public class GameHandler_TurnBasedSystem : MonoBehaviour
     private void SetupTurnBasedSystem(List<TeamSO> gameTeams, List<CombatUnit> combatUnits)
     {
         turnBasedSystem = new TurnBasedSystem(gameTeams, combatUnits);
-        turnBasedSystem.OnSelectUnit += TurnBasedSystem_OnSelectUnit;
         turnBasedSystem.OnMoveUnit += TurnBasedSystem_OnMoveUnit;
+        turnBasedSystem.OnAutoSelectUnit += TurnBasedSystem_OnAutoSelectUnit;
     }
+
 
     private void SetupTileInteractionSystem(MapSettings mapSettings)
     {
@@ -72,16 +73,42 @@ public class GameHandler_TurnBasedSystem : MonoBehaviour
             mapSettings.Height,
             mapSettings.cellSize,
             mapSettings.Origin.position);
-        tileInteractionSystem.OnClickUnitMove += TileInteractionSystem_OnClickUnitMove;
-        tileInteractionSystem.OnClickUnitAttack += TileInteractionSystem_OnClickUnitAttack;
+        tileInteractionSystem.OnClickUnit += TileInteractionSystem_OnClickUnit;
         tileInteractionSystem.OnClickEmptyTile += TileInteractionSystem_OnClickEmptyTile;
         tileInteractionSystem.OnMoveUnit += TileInteractionSystem_OnMoveUnit;
+        tileInteractionSystem.OnAttackUnit += TileInteractionSystem_OnAttackUnit;
+        tileInteractionSystem.OnSkipTurn += TileInteractionSystem_OnSkipTurn;
 
     }
 
-    private void TileInteractionSystem_OnClickUnitAttack(CombatUnit unit)
+    private void TileInteractionSystem_OnSkipTurn()
     {
-        turnBasedSystem.SelectUnit(unit);
+        turnBasedSystem.ClearCurrentUnitMoveActions();
+    }
+
+    private void TileInteractionSystem_OnAttackUnit(CombatUnit targetUnit)
+    {
+        turnBasedSystem.AttackUnit(targetUnit);
+    }
+
+    private void TileInteractionSystem_OnClickUnit(CombatUnit unit,MoveAction moveAction)
+    {
+        if (turnBasedSystem.SelectUnit(unit, moveAction))
+        {
+            switch(moveAction)
+            {
+                case MoveAction.Move:
+                    int unitMoveTiles = unit.GetCombatUnitSO().moveTiles;
+                    List<Vector2Int> walkTiles = pathFindingSystem.GetAvailableMoveIndices(unit.transform.position, unitMoveTiles);
+                    tileInteractionSystem.SetActionTilesList(walkTiles, ActionTile.TileType.Walk);
+                    break;
+                case MoveAction.Attack:
+                    int unitAttackTiles = unit.GetCombatUnitSO().attackTiles;
+                    List<Vector2Int> attackTiles = pathFindingSystem.GetTeamAvailableInteractIndices(unit.transform.position, unit.GetTeam(), unitAttackTiles);
+                    tileInteractionSystem.SetActionTilesList(attackTiles, ActionTile.TileType.Attack);
+                    break;
+            }
+        }
     }
 
     private void TileInteractionSystem_OnMoveUnit(Vector3 destination)
@@ -93,21 +120,26 @@ public class GameHandler_TurnBasedSystem : MonoBehaviour
     {
         turnBasedSystem.DeselectUnit();
     }
-
-    private void TileInteractionSystem_OnClickUnitMove(CombatUnit unit)
-    {
-        turnBasedSystem.SelectUnit(unit);
-    }
-    private void TurnBasedSystem_OnSelectUnit(CombatUnit unit)
-    {
-        int unitMoveTiles = unit.GetCombatUnitSO().moveTiles;
-        List<Vector2Int> walkTiles = pathFindingSystem.GetAvailableMoveIndices(unit.transform.position, unitMoveTiles);
-        tileInteractionSystem.SetActionTilesList(walkTiles,ActionTile.TileType.Walk);
-    }
     private void TurnBasedSystem_OnMoveUnit(CombatUnit unit, Vector3 destination)
     {
         List<Vector3> movePath = GetMovePath(unit.transform.position, destination);
         unit.MovePath(movePath);
+    }
+    private void TurnBasedSystem_OnAutoSelectUnit(CombatUnit unit, MoveAction moveAction)
+    {
+        switch (moveAction)
+        {
+            case MoveAction.Move:
+                int unitMoveTiles = unit.GetCombatUnitSO().moveTiles;
+                List<Vector2Int> walkTiles = pathFindingSystem.GetAvailableMoveIndices(unit.transform.position, unitMoveTiles);
+                tileInteractionSystem.SetActionTilesList(walkTiles, ActionTile.TileType.Walk);
+                break;
+            case MoveAction.Attack:
+                int unitAttackTiles = unit.GetCombatUnitSO().attackTiles;
+                List<Vector2Int> attackTiles = pathFindingSystem.GetTeamAvailableInteractIndices(unit.transform.position, unit.GetTeam(), unitAttackTiles);
+                tileInteractionSystem.SetActionTilesList(attackTiles, ActionTile.TileType.Attack);
+                break;
+        }
     }
 
     private List<Vector3> GetMovePath(Vector3 start,Vector3 end)

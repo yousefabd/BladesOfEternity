@@ -17,8 +17,8 @@ public class TurnBasedSystem
     private int currentSelectedUnitIndex = 0;
     private bool IsUnitMoveActionInProgress = false;
 
-    public event Action<CombatUnit> OnSelectUnit;
-    public event Action<CombatUnit,Vector3> OnMoveUnit;
+    public event Action<CombatUnit, Vector3> OnMoveUnit;
+    public event Action<CombatUnit, MoveAction> OnAutoSelectUnit;
 
     public TurnBasedSystem(List<TeamSO> teams,List<CombatUnit> combatUnits)
     {
@@ -33,39 +33,15 @@ public class TurnBasedSystem
         }
         currentTeamIndex = -1;
         SwitchTurn();
-        //InteractionSystem.Instance.OnClickUnit += InteractionSystem_OnClickUnit;
-        //InteractionSystem.Instance.OnMoveUnit += InteractionSystem_OnMoveUnit;
-        //InteractionSystem.Instance.OnRightClickUnit += InteractionSystem_OnRightClickUnit;
     }
 
-    private void InteractionSystem_OnRightClickUnit(CombatUnit unit)
+    public bool SelectUnit(CombatUnit unit,MoveAction moveAction)
     {
-        if (unit.GetTeam().Equals(teams[currentTeamIndex]))
+        if (!unit.GetTeam().Equals(GetCurrentTeam()))
         {
-            return;
+            return false;
         }
-        AttackUnit(unit);
-    }
-
-    private void InteractionSystem_OnMoveUnit(Vector3 movePosition)
-    {
-        MoveUnit(movePosition);
-    }
-
-    private void InteractionSystem_OnClickUnit(CombatUnit unit)
-    {
-        if (unit.GetTeam().Equals(teams[currentTeamIndex]))
-        {
-            SelectUnit(unit);
-        }
-        else
-        {
-            Debug.Log("Selected unit is of team: " + unit.GetTeam().teamName + " but current team is: " + teams[currentTeamIndex].teamName);
-        }
-    }
-    public bool SelectUnit(CombatUnit unit)
-    {
-        if (!unit.GetTeam().Equals(teams[currentTeamIndex]))
+        else if (!CanPerformAction(unit, moveAction) || IsUnitMoveActionInProgress)
         {
             return false;
         }
@@ -74,7 +50,6 @@ public class TurnBasedSystem
             if (availableUnits[i].Equals(unit))
             {
                 currentSelectedUnitIndex = i;
-                OnSelectUnit?.Invoke(unit);
             }
         }
         return true;
@@ -87,9 +62,54 @@ public class TurnBasedSystem
     {
         return unitMoveActions[unit].Any();
     }
-    private bool CanPerformAction(CombatUnit unit,MoveAction moveAction)
+    private bool CanPerformAction(CombatUnit unit, MoveAction moveAction)
     {
         return unitMoveActions[unit].Contains(moveAction);
+    }
+    private MoveAction GetAnyMoveAction(CombatUnit unit)
+    {
+        if (unitMoveActions.Any())
+        {
+            return unitMoveActions[unit].First();
+        }
+        return default; 
+    }
+    public void RemoveUnitMoveAction(CombatUnit unit, MoveAction moveAction)
+    {
+        unitMoveActions[unit].Remove(moveAction);
+        if (!HasMoveActions(unit))
+        {
+            availableUnits.Remove(unit);
+            if (availableUnits.Count == 0)
+            {
+                SwitchTurn();
+                return;
+            }
+            currentSelectedUnitIndex = 0;
+            CombatUnit nextUnit = availableUnits[currentSelectedUnitIndex];
+            OnAutoSelectUnit?.Invoke(nextUnit, GetAnyMoveAction(nextUnit));
+            return;
+        }
+        OnAutoSelectUnit?.Invoke(unit, GetAnyMoveAction(unit));
+
+    }
+    public void ClearCurrentUnitMoveActions()
+    {
+        if(currentSelectedUnitIndex == -1)
+        {
+            currentSelectedUnitIndex = 0;
+        }
+        CombatUnit unit = availableUnits[currentSelectedUnitIndex];
+        unitMoveActions[unit].Clear();
+        availableUnits.Remove(unit);
+        if (availableUnits.Count == 0)
+        {
+            SwitchTurn();
+            return;
+        }
+        currentSelectedUnitIndex = 0;
+        CombatUnit nextUnit = availableUnits[currentSelectedUnitIndex];
+        OnAutoSelectUnit?.Invoke(nextUnit,GetAnyMoveAction(nextUnit));
     }
     public void MoveUnit(Vector3 destination)
     {
@@ -107,11 +127,15 @@ public class TurnBasedSystem
         {
             return;
         }
-        Debug.Log("Selected unit is " + currentSelectedUnitIndex);
         CombatUnit unit = availableUnits[currentSelectedUnitIndex];
         unit.Attack(targetUnit);
         ApplyMoveAction(unit, MoveAction.Attack);
 
+    }
+
+    public TeamSO GetCurrentTeam()
+    {
+        return teams[currentTeamIndex];
     }
     private void ApplyMoveAction(CombatUnit unit, MoveAction moveAction)
     {
@@ -120,11 +144,10 @@ public class TurnBasedSystem
             return;
         }
 
-        unitMoveActions[unit].Remove(moveAction);
         IsUnitMoveActionInProgress = true;
         void OnUnitActionEnd()
         {
-            OnUnitCompletedMoveAction(unit);
+            OnUnitCompletedMoveAction(unit, moveAction);
             unit.OnMovementEnd -= OnUnitActionEnd;
             unit.OnAttackEnd -= OnUnitActionEnd;
         }
@@ -132,30 +155,25 @@ public class TurnBasedSystem
         unit.OnMovementEnd += OnUnitActionEnd;
         unit.OnAttackEnd += OnUnitActionEnd;
     }
-    private void OnUnitCompletedMoveAction(CombatUnit unit)
+    private void OnUnitCompletedMoveAction(CombatUnit unit,MoveAction moveAction)
     {
         IsUnitMoveActionInProgress = false;
-        if (!HasMoveActions(unit))
-        {
-            availableUnits.Remove(unit);
-            currentSelectedUnitIndex = 0;
-        }
-
-        if (availableUnits.Count == 0)
-        {
-            SwitchTurn();
-        }
+        RemoveUnitMoveAction(unit, moveAction);
     }
     private void SwitchTurn()
     {
         availableUnits.Clear();
         currentTeamIndex = (currentTeamIndex + 1) % teams.Count;
-        DeselectUnit();
         foreach(var combatUnit in teamCombatUnits[teams[currentTeamIndex]])
         {
             availableUnits.Add(combatUnit);
             unitMoveActions[combatUnit] = new List<MoveAction> { MoveAction.Move, MoveAction.Attack}; 
         }
-        
+        if (availableUnits.Any())
+        {
+            currentSelectedUnitIndex = 0;
+            CombatUnit nextUnit = availableUnits[currentSelectedUnitIndex];
+            OnAutoSelectUnit?.Invoke(nextUnit,GetAnyMoveAction(nextUnit));
+        }
     }
 }
